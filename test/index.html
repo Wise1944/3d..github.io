@@ -155,15 +155,15 @@
 
 
 				 loader = new THREE.TextureLoader();
-					var normal = loader.load( 'Wise1944/3d..github.io/tree/master/test/js/models/3ds/portalgun/textures/PAS_Cret.jpg' );
+					var normal = loader.load( 'https://github.com/Wise1944/3d..github.io/tree/master/test/js/models/3ds/portalgun/textures/PAS_Cret.jpg' );
 
 					 loader = new THREE.FBXLoader();
-						loader.setResourcePath( 'Wise1944/3d..github.io/tree/master/test/js/models/3ds/portalgun/textures/' );
+						loader.setResourcePath( 'https://github.com/Wise1944/3d..github.io/tree/master/test/js/models/3ds/portalgun/textures/' );
 
 
 				// model terrain
 
-				loader.load( 'https://github.com/Wise1944/3d..github.io/blob/master/test/js/models/fbx/terrain.FBX', function ( object ) {
+				loader.load( 'https://github.com/Wise1944/3d..github.io/blob/master/test/js/models/fbx/terrain.fbx', function ( object ) {
 
 						mixer = new THREE.AnimationMixer( object );
 
