@@ -53,9 +53,6 @@
     </div>
    
    <script>
-
-
-  
 			var container = document.getElementById( 'container' );
 			var mouseHelper;
 			var intersection = {
@@ -155,15 +152,15 @@
 
 
 				 loader = new THREE.TextureLoader();
-					var normal = loader.load( "https://github.com/Wise1944/3d..github.io/tree/master/test/js/models/3ds/portalgun/textures/PAS_Cret.jpg" );
+					var normal = loader.load( '3d..github.io/tree/master/test/js/models/3ds/portalgun/textures/PAS_Cret.jpg' );
 
 					 loader = new THREE.FBXLoader();
-						loader.setResourcePath( "https://github.com/Wise1944/3d..github.io/tree/master/test/js/models/3ds/portalgun/textures/" );
+						loader.setResourcePath( '3d..github.io/tree/master/test/js/models/3ds/portalgun/textures/' );
 
 
 				// model terrain
 
-				loader.load( "https://github.com/Wise1944/3d..github.io/tree/master/test/js/models/fbx/terrain.fbx", function ( object ) {
+				loader.load('3d..github.io/tree/master/test/js/models/fbx/terrain.fbx', function ( object ) {
 
 						mixer = new THREE.AnimationMixer( object );
 
