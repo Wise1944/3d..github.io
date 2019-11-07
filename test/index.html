@@ -2,7 +2,7 @@
 <html>
   <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-      <title>3d</title>
+      <title>Spring Boot WebSocket Chat Application | CalliCoder</title>
      
       <style>
 			body {
@@ -30,29 +30,26 @@
 			}	
 	
 		</style>
-      <script src="https://threejs.org/build/three.js"></script>
-      <script src="https://threejs.org/examples/js/geometries/DecalGeometry.js"></script>
+      	<script src="js/build/three.js"></script>
 
-      <script src="https://threejs.org/examples/js/loaders/ColladaLoader.js"></script>
+		<script src="js/js/libs/inflate.min.js"></script>
+		<script src="js/js/loaders/FBXLoader.js"></script>
 
-
-      <script src="https://threejs.org/examples/js/loaders/FBXLoader.js"></script>
-
-      <script src="https://threejs.org/examples/js/libs/inflate.min.js"></script>
-
-      <script src="https://threejs.org/examples/js/WebGL.js"></script>
-      <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
-      <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-      <script src="https://threejs.org/examples/js/libs/jszip.min.js"></script>
+		<script src="js/js/controls/OrbitControls.js"></script>
+		<script src="js/js/loaders/TDSLoader.js"></script>
+		<script src="js/js/WebGL.js"></script>
+		<script src="js/js/libs/stats.min.js"></script>
   </head>
   <body>
 
 
-     <div id="container">
+     <div id="container" >
         
     </div>
+
    
    <script>
+
 			var container = document.getElementById( 'container' );
 			var mouseHelper;
 			var intersection = {
@@ -152,15 +149,15 @@
 
 
 				 loader = new THREE.TextureLoader();
-					var normal = loader.load( '3d..github.io/tree/master/test/js/models/3ds/portalgun/textures/PAS_Cret.jpg' );
+					var normal = loader.load( 'js/models/3ds/portalgun/textures/PAS_Cret.jpg' );
 
 					 loader = new THREE.FBXLoader();
-						loader.setResourcePath( '3d..github.io/tree/master/test/js/models/3ds/portalgun/textures/' );
+						loader.setResourcePath( 'js/models/3ds/portalgun/textures/' );
 
 
 				// model terrain
 
-				loader.load('3d..github.io/tree/master/test/js/models/fbx/terrain.fbx', function ( object ) {
+				loader.load( 'js/models/fbx/terrain.fbx', function ( object ) {
 
 						mixer = new THREE.AnimationMixer( object );
 
@@ -275,7 +272,7 @@
 
 				window.addEventListener( 'resize', onWindowResize, false );
 
-				 stats
+				// stats
 				stats = new Stats();
 				container.appendChild( stats.dom );
 
@@ -284,6 +281,7 @@
                     camera.add(emitter);
 
 
+                  // onConnected();
 
 				function onMouseDown() {
                       let plasmaBall = new THREE.Mesh(new THREE.SphereGeometry(1, 1, 1), new THREE.MeshBasicMaterial({
