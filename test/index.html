@@ -222,7 +222,7 @@
 
 
 				// model
-
+                var loader = new FBXLoader();
 				loader.load( 'js/models/fbx/t26_head.fbx', function ( object ) {
 
 					Tank.head=object;
@@ -244,8 +244,8 @@
 				//t 26
 
 				// model
-
-				loader.load( 'TestGame3d.github.io/blob/master/js/models/fbx/t26_head.FBX', function ( object ) {
+                var loader = new FBXLoader();
+				loader.load( 'js/models/fbx/t26_head.fbx', function ( object ) {
 
 
 					Tank.stat=object;
